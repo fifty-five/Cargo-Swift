@@ -14,6 +14,7 @@
 				8067F91720456FAC0037880D /* Run Script */,
 			);
 			dependencies = (
+				80AF3E30204F0386002B371A /* PBXTargetDependency */,
 			);
 			name = Aggregate;
 			productName = Aggregate;
@@ -21,20 +22,30 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		80123F23204FEEB5004D66F2 /* CargoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80123F22204FEEB5004D66F2 /* CargoCore.framework */; };
 		8067F90420456F2F0037880D /* FacebookHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8067F90220456F2F0037880D /* FacebookHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8067F91320456F790037880D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8067F91120456F780037880D /* Bolts.framework */; };
 		8067F91420456F790037880D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8067F91220456F790037880D /* FBSDKCoreKit.framework */; };
-		8067F91620456F8D0037880D /* CargoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8067F91520456F8D0037880D /* CargoCore.framework */; };
 		8067F922204579380037880D /* FacebookHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067F921204579380037880D /* FacebookHandler.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		80AF3E2F204F0386002B371A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8067F8F620456F2E0037880D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8067F8FE20456F2F0037880D;
+			remoteInfo = FacebookHandler;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		80123F22204FEEB5004D66F2 /* CargoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CargoCore.framework; sourceTree = "<group>"; };
 		8067F8FF20456F2F0037880D /* FacebookHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FacebookHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8067F90220456F2F0037880D /* FacebookHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FacebookHandler.h; sourceTree = "<group>"; };
 		8067F90320456F2F0037880D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8067F91120456F780037880D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		8067F91220456F790037880D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		8067F91520456F8D0037880D /* CargoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CargoCore.framework; sourceTree = "<group>"; };
 		8067F921204579380037880D /* FacebookHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,7 +56,7 @@
 			files = (
 				8067F91320456F790037880D /* Bolts.framework in Frameworks */,
 				8067F91420456F790037880D /* FBSDKCoreKit.framework in Frameworks */,
-				8067F91620456F8D0037880D /* CargoCore.framework in Frameworks */,
+				80123F23204FEEB5004D66F2 /* CargoCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +93,7 @@
 		8067F91020456F670037880D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8067F91520456F8D0037880D /* CargoCore.framework */,
+				80123F22204FEEB5004D66F2 /* CargoCore.framework */,
 				8067F91120456F780037880D /* Bolts.framework */,
 				8067F91220456F790037880D /* FBSDKCoreKit.framework */,
 			);
@@ -197,6 +208,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		80AF3E30204F0386002B371A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8067F8FE20456F2F0037880D /* FacebookHandler */;
+			targetProxy = 80AF3E2F204F0386002B371A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		8067F90620456F2F0037880D /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -266,7 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 79FS8B67FE;

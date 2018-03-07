@@ -23,7 +23,6 @@
 
 /* Begin PBXBuildFile section */
 		8014B230203B119100DFE21A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8014B22F203B119100DFE21A /* AdSupport.framework */; };
-		8014B2CD203B2D0100DFE21A /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8014B2CC203B2D0100DFE21A /* GoogleToolboxForMac.framework */; };
 		806212152033237800EAFA34 /* CargoCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 806212132033237800EAFA34 /* CargoCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8062121C2033238F00EAFA34 /* Cargo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8062121B2033238F00EAFA34 /* Cargo.swift */; };
 		8062121E203323A700EAFA34 /* CargoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8062121D203323A700EAFA34 /* CargoItem.swift */; };
@@ -87,7 +86,6 @@
 		806212262033242500EAFA34 /* Tags.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tags.h; sourceTree = "<group>"; };
 		806212292033246900EAFA34 /* CARLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CARLogger.swift; sourceTree = "<group>"; };
 		8062122B2033248800EAFA34 /* CARConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CARConstants.swift; sourceTree = "<group>"; };
-		8067F8F120456BC00037880D /* CargoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CargoCore.framework; sourceTree = "<group>"; };
 		8084271E203C615F00FD8028 /* GoogleTagManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleTagManager.framework; sourceTree = "<group>"; };
 		80842720203C615F00FD8028 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		80842721203C615F00FD8028 /* pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pb.h; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 				80842763203C616000FD8028 /* FirebaseCore.framework in Frameworks */,
 				80842761203C616000FD8028 /* FirebaseInstanceID.framework in Frameworks */,
 				8014B230203B119100DFE21A /* AdSupport.framework in Frameworks */,
-				8014B2CD203B2D0100DFE21A /* GoogleToolboxForMac.framework in Frameworks */,
 				8084276A203C616000FD8028 /* libGoogleAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,7 +409,6 @@
 		80DB397C20333E60008AD1D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8067F8F120456BC00037880D /* CargoCore.framework */,
 				80842729203C615F00FD8028 /* FirebaseAnalytics */,
 				80842733203C615F00FD8028 /* FirebaseCore */,
 				8084272E203C615F00FD8028 /* FirebaseInstanceID */,
@@ -600,7 +596,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -635,7 +631,8 @@
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 79FS8B67FE;
@@ -714,6 +711,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = "$(inherited)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79FS8B67FE;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
