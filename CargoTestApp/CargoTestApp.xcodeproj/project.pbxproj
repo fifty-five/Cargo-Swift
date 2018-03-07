@@ -13,14 +13,17 @@
 		808E1A5620501C2500E1980B /* CargoTestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 808E1A5420501C2500E1980B /* CargoTestApp.xcdatamodeld */; };
 		808E1A5820501C2500E1980B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 808E1A5720501C2500E1980B /* Assets.xcassets */; };
 		808E1A5B20501C2600E1980B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808E1A5920501C2600E1980B /* LaunchScreen.storyboard */; };
-		808E1A6420501C6600E1980B /* FacebookHandler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1A6220501C6000E1980B /* FacebookHandler.framework */; };
-		808E1A6520501C6600E1980B /* FacebookHandler.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1A6220501C6000E1980B /* FacebookHandler.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		808E1A6620501C6600E1980B /* CargoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1A6320501C6600E1980B /* CargoCore.framework */; };
-		808E1A6720501C6600E1980B /* CargoCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1A6320501C6600E1980B /* CargoCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		808E1A6A20501C8E00E1980B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 808E1A6920501C8E00E1980B /* GoogleService-Info.plist */; };
-		808E1A732050221000E1980B /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1A712050214400E1980B /* GoogleToolboxForMac.framework */; };
-		808E1A742050221000E1980B /* GoogleToolboxForMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1A712050214400E1980B /* GoogleToolboxForMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		808E1A76205022CE00E1980B /* container in Resources */ = {isa = PBXBuildFile; fileRef = 808E1A75205022CE00E1980B /* container */; };
+		808E1A8D2050314C00E1980B /* CargoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1A852050314300E1980B /* CargoCore.framework */; };
+		808E1A8E2050314C00E1980B /* CargoCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1A852050314300E1980B /* CargoCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		808E1A8F2050314C00E1980B /* FacebookHandler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1A872050314300E1980B /* FacebookHandler.framework */; };
+		808E1A902050314C00E1980B /* FacebookHandler.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1A872050314300E1980B /* FacebookHandler.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		808E1A952050314C00E1980B /* TuneHandler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1A862050314300E1980B /* TuneHandler.framework */; };
+		808E1A962050314C00E1980B /* TuneHandler.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1A862050314300E1980B /* TuneHandler.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		808E1A972050315A00E1980B /* Tune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1A842050314300E1980B /* Tune.framework */; };
+		808E1A99205031D900E1980B /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1A832050314300E1980B /* GoogleToolboxForMac.framework */; };
+		808E1A9A205031D900E1980B /* GoogleToolboxForMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1A832050314300E1980B /* GoogleToolboxForMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,9 +33,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				808E1A742050221000E1980B /* GoogleToolboxForMac.framework in Embed Frameworks */,
-				808E1A6720501C6600E1980B /* CargoCore.framework in Embed Frameworks */,
-				808E1A6520501C6600E1980B /* FacebookHandler.framework in Embed Frameworks */,
+				808E1A8E2050314C00E1980B /* CargoCore.framework in Embed Frameworks */,
+				808E1A9A205031D900E1980B /* GoogleToolboxForMac.framework in Embed Frameworks */,
+				808E1A962050314C00E1980B /* TuneHandler.framework in Embed Frameworks */,
+				808E1A902050314C00E1980B /* FacebookHandler.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,12 +52,13 @@
 		808E1A5720501C2500E1980B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		808E1A5A20501C2600E1980B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		808E1A5C20501C2600E1980B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		808E1A6220501C6000E1980B /* FacebookHandler.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookHandler.framework; sourceTree = "<group>"; };
-		808E1A6320501C6600E1980B /* CargoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CargoCore.framework; sourceTree = "<group>"; };
 		808E1A6920501C8E00E1980B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		808E1A6F2050211E00E1980B /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = ../CargoSwiftFramework/CargoCore/CargoCore/CargoDependencies/GoogleToolboxForMac.framework; sourceTree = "<group>"; };
-		808E1A712050214400E1980B /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = "<group>"; };
 		808E1A75205022CE00E1980B /* container */ = {isa = PBXFileReference; lastKnownFileType = folder; path = container; sourceTree = "<group>"; };
+		808E1A832050314300E1980B /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = Frameworks/GoogleToolboxForMac.framework; sourceTree = "<group>"; };
+		808E1A842050314300E1980B /* Tune.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Tune.framework; path = Frameworks/Tune.framework; sourceTree = "<group>"; };
+		808E1A852050314300E1980B /* CargoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CargoCore.framework; path = Frameworks/CargoCore.framework; sourceTree = "<group>"; };
+		808E1A862050314300E1980B /* TuneHandler.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TuneHandler.framework; path = Frameworks/TuneHandler.framework; sourceTree = "<group>"; };
+		808E1A872050314300E1980B /* FacebookHandler.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookHandler.framework; path = Frameworks/FacebookHandler.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +66,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				808E1A732050221000E1980B /* GoogleToolboxForMac.framework in Frameworks */,
-				808E1A6620501C6600E1980B /* CargoCore.framework in Frameworks */,
-				808E1A6420501C6600E1980B /* FacebookHandler.framework in Frameworks */,
+				808E1A8D2050314C00E1980B /* CargoCore.framework in Frameworks */,
+				808E1A8F2050314C00E1980B /* FacebookHandler.framework in Frameworks */,
+				808E1A99205031D900E1980B /* GoogleToolboxForMac.framework in Frameworks */,
+				808E1A952050314C00E1980B /* TuneHandler.framework in Frameworks */,
+				808E1A972050315A00E1980B /* Tune.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,10 +80,7 @@
 		808E1A4120501C2200E1980B = {
 			isa = PBXGroup;
 			children = (
-				808E1A712050214400E1980B /* GoogleToolboxForMac.framework */,
 				808E1A6920501C8E00E1980B /* GoogleService-Info.plist */,
-				808E1A6320501C6600E1980B /* CargoCore.framework */,
-				808E1A6220501C6000E1980B /* FacebookHandler.framework */,
 				808E1A4C20501C2300E1980B /* CargoTestApp */,
 				808E1A4B20501C2300E1980B /* Products */,
 				808E1A6E2050211D00E1980B /* Frameworks */,
@@ -109,7 +113,11 @@
 		808E1A6E2050211D00E1980B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				808E1A6F2050211E00E1980B /* GoogleToolboxForMac.framework */,
+				808E1A852050314300E1980B /* CargoCore.framework */,
+				808E1A872050314300E1980B /* FacebookHandler.framework */,
+				808E1A832050314300E1980B /* GoogleToolboxForMac.framework */,
+				808E1A842050314300E1980B /* Tune.framework */,
+				808E1A862050314300E1980B /* TuneHandler.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -276,6 +284,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = CargoTestApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

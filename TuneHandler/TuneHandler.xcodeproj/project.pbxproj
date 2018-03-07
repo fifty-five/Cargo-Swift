@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		808E1A7A2050267C00E1980B /* CargoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1A792050267B00E1980B /* CargoCore.framework */; };
 		808F4D4E2048154300E44E18 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808F4D4D2048154300E44E18 /* MobileCoreServices.framework */; };
 		808F4D502048154C00E44E18 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 808F4D4F2048154C00E44E18 /* libz.tbd */; };
 		808F4D52204815A200E44E18 /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808F4D51204815A200E44E18 /* CoreSpotlight.framework */; };
@@ -34,11 +35,11 @@
 		808F4D622048172200E44E18 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808F4D612048172200E44E18 /* SystemConfiguration.framework */; };
 		80A127A42046E73F005B1985 /* TuneHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 80A127A22046E73F005B1985 /* TuneHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80A127AB2046E77C005B1985 /* TuneHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A127AA2046E77C005B1985 /* TuneHandler.swift */; };
-		80A127AE2046E820005B1985 /* CargoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80A127AD2046E81F005B1985 /* CargoCore.framework */; };
 		80B739E520470CBF006B946A /* Tune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B739E420470CBE006B946A /* Tune.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		808E1A792050267B00E1980B /* CargoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CargoCore.framework; sourceTree = "<group>"; };
 		808F4D4D2048154300E44E18 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		808F4D4F2048154C00E44E18 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		808F4D51204815A200E44E18 /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
@@ -54,7 +55,6 @@
 		80A127A22046E73F005B1985 /* TuneHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TuneHandler.h; sourceTree = "<group>"; };
 		80A127A32046E73F005B1985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80A127AA2046E77C005B1985 /* TuneHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TuneHandler.swift; sourceTree = "<group>"; };
-		80A127AD2046E81F005B1985 /* CargoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CargoCore.framework; sourceTree = "<group>"; };
 		80B739E420470CBE006B946A /* Tune.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Tune.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +66,7 @@
 				808F4D622048172200E44E18 /* SystemConfiguration.framework in Frameworks */,
 				808F4D602048171800E44E18 /* StoreKit.framework in Frameworks */,
 				808F4D5E2048171000E44E18 /* Security.framework in Frameworks */,
+				808E1A7A2050267C00E1980B /* CargoCore.framework in Frameworks */,
 				808F4D5C2048170700E44E18 /* QuartzCore.framework in Frameworks */,
 				808F4D5A204816FC00E44E18 /* iAd.framework in Frameworks */,
 				808F4D58204816D900E44E18 /* CoreTelephony.framework in Frameworks */,
@@ -74,7 +75,6 @@
 				808F4D52204815A200E44E18 /* CoreSpotlight.framework in Frameworks */,
 				808F4D502048154C00E44E18 /* libz.tbd in Frameworks */,
 				808F4D4E2048154300E44E18 /* MobileCoreServices.framework in Frameworks */,
-				80A127AE2046E820005B1985 /* CargoCore.framework in Frameworks */,
 				80B739E520470CBF006B946A /* Tune.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +112,7 @@
 		80A127AC2046E79E005B1985 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				808E1A792050267B00E1980B /* CargoCore.framework */,
 				808F4D612048172200E44E18 /* SystemConfiguration.framework */,
 				808F4D5F2048171800E44E18 /* StoreKit.framework */,
 				808F4D5D2048171000E44E18 /* Security.framework */,
@@ -124,7 +125,6 @@
 				808F4D4F2048154C00E44E18 /* libz.tbd */,
 				808F4D4D2048154300E44E18 /* MobileCoreServices.framework */,
 				80B739E420470CBE006B946A /* Tune.framework */,
-				80A127AD2046E81F005B1985 /* CargoCore.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -282,6 +282,36 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 x86_64 i386";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		80A127A92046E73F005B1985 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 79FS8B67FE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = TuneHandler/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lz",
@@ -310,36 +340,6 @@
 					"-framework",
 					"\"MobileCoreServices\"",
 				);
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "arm64 armv7 x86_64 i386";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		80A127A92046E73F005B1985 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 79FS8B67FE;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
-				);
-				INFOPLIST_FILE = TuneHandler/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				ONLY_ACTIVE_ARCH = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fifty-five.TuneHandler";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

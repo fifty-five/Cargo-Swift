@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import CargoCore
 import FacebookHandler
+import TuneHandler
 
 @available(iOS 10.0, *)
 @UIApplicationMain
@@ -28,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         _ = FacebookHandler();
+        _ = TuneHandler();
         return true
     }
 
