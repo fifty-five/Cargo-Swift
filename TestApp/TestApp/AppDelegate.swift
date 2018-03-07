@@ -11,7 +11,7 @@ import CoreData
 import CargoCore
 //import ATInternetHandler
 import FacebookHandler
-import TuneHandler
+//import TuneHandler
 
 @available(iOS 10.0, *)
 @available(iOS 10.0, *)
@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         _ = FacebookHandler();
-        _ = TuneHandler();
+//        _ = TuneHandler();
 //        _ = ATInternetHandler();
         
         return true
