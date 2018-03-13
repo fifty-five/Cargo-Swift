@@ -15,6 +15,7 @@ public class AdobeHandler: CARTagHandler {
     let ADB_INIT = "ADB_init";
     let ADB_TAG_EVENT = "ADB_tagEvent";
     let ADB_TAG_SCREEN = "ADB_tagScreen";
+    let ADB_TRACK_LOCATION = "ADB_trackLocation";
     
     
 /* ********************************** Handler core methods ************************************** */
@@ -47,6 +48,9 @@ public class AdobeHandler: CARTagHandler {
                 break;
             case ADB_TAG_SCREEN:
                 self.tagScreen(parameters: parameters);
+                break;
+            case ADB_TRACK_LOCATION:
+                self.trackLocation(parameters: parameters);
                 break;
             default:
                 logger.logUnknownFunctionTag(tagName);
@@ -109,5 +113,27 @@ public class AdobeHandler: CARTagHandler {
         }
     }
     
+    fileprivate func trackLocation(parameters: [AnyHashable: Any]) {
+        let location = CargoLocation.getLocation();
+        
+        if (location != nil) {
+            ADBMobile.trackLocation(location, parameters);
+            self.logger.logParamSetWithSuccess("location", value: location);
+            if (parameters.count > 0) {
+                self.logger.logParamSetWithSuccess("locationParameters", value: parameters);
+            }
+        }
+        else {
+            self.logger.logMissingParam("location", methodName: ADB_TRACK_LOCATION);
+        }
+    }
+
 }
+
+
+
+
+
+
+
 

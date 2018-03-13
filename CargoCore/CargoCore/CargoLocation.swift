@@ -11,13 +11,13 @@ import CoreLocation
 
 public class CargoLocation : NSObject {
 
-    fileprivate var location:CLLocation? = nil;
+    fileprivate static var location:CLLocation? = nil;
 
     public func setLocation(location: CLLocation) {
-        self.location = location;
+        CargoLocation.location = location;
     }
     
-    public func getLocation() -> CLLocation {
-        return self.location!;
+    public static func getLocation() -> CLLocation {
+        return CargoLocation.location!;
     }
 }

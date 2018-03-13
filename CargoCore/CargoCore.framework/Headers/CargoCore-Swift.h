@@ -227,5 +227,11 @@ SWIFT_CLASS_NAMED("CargoItem")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
 
+
+SWIFT_CLASS("_TtC9CargoCore13CargoLocation")
+@interface CargoLocation : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 SWIFT_MODULE_NAMESPACE_POP
 #pragma clang diagnostic pop

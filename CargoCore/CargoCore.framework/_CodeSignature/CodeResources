@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/CargoCore-Swift.h</key>
 		<data>
-		MjPDpGdJvUggPArSDv92ywRCGl0=
+		dljNd+m59nteI5AJjRY0pW6RsZA=
 		</data>
 		<key>Headers/CargoCore.h</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>Modules/CargoCore.swiftmodule/arm.swiftmodule</key>
 		<data>
-		tVKt82BgnXonEDyAhjhN4/rLS/Y=
+		50979sDyGW8RyveVZ1GjPnFuGv4=
 		</data>
 		<key>Modules/CargoCore.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -98,7 +98,7 @@
 		</data>
 		<key>Modules/CargoCore.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		F8g+QZtHaM16VpsT2YFXP3vy4dE=
+		n5U8GbGJCqpxllMuuGgh8Pe0/Hc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -115,11 +115,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MjPDpGdJvUggPArSDv92ywRCGl0=
+			dljNd+m59nteI5AJjRY0pW6RsZA=
 			</data>
 			<key>hash2</key>
 			<data>
-			TZ6YCn3BNE5jEd4ri85017zk1Xdc8GuDga+JrMdFd1g=
+			teV08/1cBo0JUrw8tCWHJtNO3QNBn99MFleJOHEAcYA=
 			</data>
 		</dict>
 		<key>Headers/CargoCore.h</key>
@@ -335,11 +335,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tVKt82BgnXonEDyAhjhN4/rLS/Y=
+			50979sDyGW8RyveVZ1GjPnFuGv4=
 			</data>
 			<key>hash2</key>
 			<data>
-			aXQQqlpAZ5BzZ4cEIlWkmMoCt8scDJcU7YCD/vImgiw=
+			RhsrIBnYaxyH/niyegXIa3wJwv+lOMg/7rLAOTsbL8s=
 			</data>
 		</dict>
 		<key>Modules/CargoCore.swiftmodule/arm64.swiftdoc</key>
@@ -357,11 +357,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			F8g+QZtHaM16VpsT2YFXP3vy4dE=
+			n5U8GbGJCqpxllMuuGgh8Pe0/Hc=
 			</data>
 			<key>hash2</key>
 			<data>
-			CVTRGoFa5sJN+EInY0QgbpsX+dEoELwluB5zcgEL/TM=
+			jnrO0aWB5Ou6CbpKW3rXhVblo7PNZ3qOQ1jR9H4ikMw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
