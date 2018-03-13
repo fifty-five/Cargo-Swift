@@ -1,0 +1,11 @@
+framework module AdobeHandler {
+  umbrella header "AdobeHandler.h"
+
+  export *
+  module * { export * }
+}
+
+module AdobeHandler.Swift {
+    header "AdobeHandler-Swift.h"
+    requires objc
+}

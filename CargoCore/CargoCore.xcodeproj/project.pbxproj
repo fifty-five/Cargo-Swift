@@ -23,6 +23,7 @@
 
 /* Begin PBXBuildFile section */
 		8014B230203B119100DFE21A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8014B22F203B119100DFE21A /* AdSupport.framework */; };
+		802A992A2057D87000479F6D /* CargoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802A99292057D87000479F6D /* CargoLocation.swift */; };
 		806212152033237800EAFA34 /* CargoCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 806212132033237800EAFA34 /* CargoCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8062121C2033238F00EAFA34 /* Cargo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8062121B2033238F00EAFA34 /* Cargo.swift */; };
 		8062121E203323A700EAFA34 /* CargoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8062121D203323A700EAFA34 /* CargoItem.swift */; };
@@ -76,6 +77,7 @@
 /* Begin PBXFileReference section */
 		8014B22F203B119100DFE21A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		8014B2CC203B2D0100DFE21A /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = CargoCore/CargoDependencies/GoogleToolboxForMac.framework; sourceTree = "<group>"; };
+		802A99292057D87000479F6D /* CargoLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CargoLocation.swift; sourceTree = "<group>"; };
 		806212102033237800EAFA34 /* CargoCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CargoCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		806212132033237800EAFA34 /* CargoCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CargoCore.h; sourceTree = "<group>"; };
 		806212142033237800EAFA34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				806212132033237800EAFA34 /* CargoCore.h */,
 				8062121B2033238F00EAFA34 /* Cargo.swift */,
 				8062121D203323A700EAFA34 /* CargoItem.swift */,
+				802A99292057D87000479F6D /* CargoLocation.swift */,
 				8062121F203323C500EAFA34 /* CARTagHandler.swift */,
 				80621221203323D400EAFA34 /* Constants */,
 				80621222203323DC00EAFA34 /* Logger */,
@@ -553,6 +556,7 @@
 				8062121C2033238F00EAFA34 /* Cargo.swift in Sources */,
 				8062121E203323A700EAFA34 /* CargoItem.swift in Sources */,
 				8062122C2033248800EAFA34 /* CARConstants.swift in Sources */,
+				802A992A2057D87000479F6D /* CargoLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
