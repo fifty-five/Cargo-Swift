@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -108,6 +107,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="R0y-EI-f32" firstAttribute="top" secondItem="bB5-k9-1V9" secondAttribute="bottom" constant="33" id="1EU-3j-fY1"/>
                                     <constraint firstItem="yFG-Eq-aNz" firstAttribute="top" secondItem="xei-Hx-bfM" secondAttribute="bottom" constant="8" symbolic="YES" id="3hh-xT-y8O"/>
@@ -144,15 +144,22 @@
                                     <constraint firstItem="Byp-Bb-59p" firstAttribute="top" secondItem="yU8-cg-XBN" secondAttribute="bottom" constant="8" symbolic="YES" id="svJ-vC-INn"/>
                                     <constraint firstItem="R0y-EI-f32" firstAttribute="centerY" secondItem="MWx-lc-AVP" secondAttribute="centerY" id="t5e-dw-1pu"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="DTM-Va-24d" appends="YES" id="k9F-BZ-RXW"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="0KL-CZ-95d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fDq-hK-e9l"/>
                             <constraint firstItem="0KL-CZ-95d" firstAttribute="top" secondItem="vLN-2f-kcQ" secondAttribute="bottom" constant="48" id="gue-Gm-XRd"/>
                             <constraint firstItem="0KL-CZ-95d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="itM-6B-xrg"/>
                             <constraint firstItem="0KL-CZ-95d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="o7H-Zm-zKG"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="DTM-Va-24d" appends="YES" id="ajD-BE-FTj"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="event_screenText" destination="Byp-Bb-59p" id="EDj-jl-cuF"/>
@@ -167,7 +174,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="DTM-Va-24d">
                     <connections>
-                        <action selector="clickOnView:" destination="BYZ-38-t0r" id="6b2-Mz-SUp"/>
+                        <action selector="clickOnView:" destination="BYZ-38-t0r" id="VMD-Ua-JV3"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

@@ -21,15 +21,15 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		80766E40204DA68F007C351C /* Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80766E3E204DA68E007C351C /* Tracker.framework */; };
-		80766E41204DA68F007C351C /* CargoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80766E3F204DA68F007C351C /* CargoCore.framework */; };
+		808E1AAD2050395F00E1980B /* Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1AAC2050395F00E1980B /* Tracker.framework */; };
+		808E1AAF20503AC600E1980B /* CargoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1AAE20503AC600E1980B /* CargoCore.framework */; };
 		80FB0BB82049585300B76E9C /* ATInternetHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 80FB0BB62049585300B76E9C /* ATInternetHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80FB0C662049BCFB00B76E9C /* ATInternetHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FB0C652049BCFB00B76E9C /* ATInternetHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		80766E3E204DA68E007C351C /* Tracker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Tracker.framework; sourceTree = "<group>"; };
-		80766E3F204DA68F007C351C /* CargoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CargoCore.framework; sourceTree = "<group>"; };
+		808E1AAC2050395F00E1980B /* Tracker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Tracker.framework; sourceTree = "<group>"; };
+		808E1AAE20503AC600E1980B /* CargoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CargoCore.framework; sourceTree = "<group>"; };
 		80FB0BB32049585300B76E9C /* ATInternetHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ATInternetHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80FB0BB62049585300B76E9C /* ATInternetHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATInternetHandler.h; sourceTree = "<group>"; };
 		80FB0BB72049585300B76E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,8 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80766E41204DA68F007C351C /* CargoCore.framework in Frameworks */,
-				80766E40204DA68F007C351C /* Tracker.framework in Frameworks */,
+				808E1AAF20503AC600E1980B /* CargoCore.framework in Frameworks */,
+				808E1AAD2050395F00E1980B /* Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +52,8 @@
 		80766E3D204DA651007C351C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				80766E3F204DA68F007C351C /* CargoCore.framework */,
-				80766E3E204DA68E007C351C /* Tracker.framework */,
+				808E1AAE20503AC600E1980B /* CargoCore.framework */,
+				808E1AAC2050395F00E1980B /* Tracker.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";

@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import CargoCore
+import ATInternetHandler
 import FacebookHandler
 import TuneHandler
 
@@ -28,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             cargoInstance.launchOptions = opts as [NSObject : AnyObject]?;
         }
         
+        _ = ATInternetHandler();
         _ = FacebookHandler();
         _ = TuneHandler();
         return true

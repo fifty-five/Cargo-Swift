@@ -24,6 +24,10 @@
 		808E1A972050315A00E1980B /* Tune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1A842050314300E1980B /* Tune.framework */; };
 		808E1A99205031D900E1980B /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1A832050314300E1980B /* GoogleToolboxForMac.framework */; };
 		808E1A9A205031D900E1980B /* GoogleToolboxForMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1A832050314300E1980B /* GoogleToolboxForMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		808E1AB220503BC800E1980B /* ATInternetHandler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1AB020503BC100E1980B /* ATInternetHandler.framework */; };
+		808E1AB320503BC800E1980B /* ATInternetHandler.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1AB020503BC100E1980B /* ATInternetHandler.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		808E1AB620503D6F00E1980B /* Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1AB420503C7300E1980B /* Tracker.framework */; };
+		808E1AB720503D6F00E1980B /* Tracker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 808E1AB420503C7300E1980B /* Tracker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +37,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				808E1AB320503BC800E1980B /* ATInternetHandler.framework in Embed Frameworks */,
+				808E1AB720503D6F00E1980B /* Tracker.framework in Embed Frameworks */,
 				808E1A8E2050314C00E1980B /* CargoCore.framework in Embed Frameworks */,
 				808E1A9A205031D900E1980B /* GoogleToolboxForMac.framework in Embed Frameworks */,
 				808E1A962050314C00E1980B /* TuneHandler.framework in Embed Frameworks */,
@@ -59,6 +65,8 @@
 		808E1A852050314300E1980B /* CargoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CargoCore.framework; path = Frameworks/CargoCore.framework; sourceTree = "<group>"; };
 		808E1A862050314300E1980B /* TuneHandler.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TuneHandler.framework; path = Frameworks/TuneHandler.framework; sourceTree = "<group>"; };
 		808E1A872050314300E1980B /* FacebookHandler.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookHandler.framework; path = Frameworks/FacebookHandler.framework; sourceTree = "<group>"; };
+		808E1AB020503BC100E1980B /* ATInternetHandler.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ATInternetHandler.framework; path = Frameworks/ATInternetHandler.framework; sourceTree = "<group>"; };
+		808E1AB420503C7300E1980B /* Tracker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Tracker.framework; path = Frameworks/Tracker.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,11 +74,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				808E1AB220503BC800E1980B /* ATInternetHandler.framework in Frameworks */,
+				808E1AB620503D6F00E1980B /* Tracker.framework in Frameworks */,
 				808E1A8D2050314C00E1980B /* CargoCore.framework in Frameworks */,
 				808E1A8F2050314C00E1980B /* FacebookHandler.framework in Frameworks */,
 				808E1A99205031D900E1980B /* GoogleToolboxForMac.framework in Frameworks */,
-				808E1A952050314C00E1980B /* TuneHandler.framework in Frameworks */,
 				808E1A972050315A00E1980B /* Tune.framework in Frameworks */,
+				808E1A952050314C00E1980B /* TuneHandler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +123,8 @@
 		808E1A6E2050211D00E1980B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				808E1AB420503C7300E1980B /* Tracker.framework */,
+				808E1AB020503BC100E1980B /* ATInternetHandler.framework */,
 				808E1A852050314300E1980B /* CargoCore.framework */,
 				808E1A872050314300E1980B /* FacebookHandler.framework */,
 				808E1A832050314300E1980B /* GoogleToolboxForMac.framework */,

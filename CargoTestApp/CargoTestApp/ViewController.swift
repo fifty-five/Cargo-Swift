@@ -50,9 +50,11 @@ class ViewController: UIViewController {
         
         if let username = self.userNameText.text {
             parameters["userName"] = username;
+            self.userNameText.text = nil;
         }
         if let userEmail = self.userEmailText.text {
             parameters["userEmail"] = userEmail;
+            self.userEmailText.text = nil;
         }
         
         Analytics.logEvent("tagUser", parameters: parameters as [String : NSObject]?);
@@ -79,6 +81,7 @@ class ViewController: UIViewController {
                 let xbox = CargoItem.init(name: "xBox One", unitPrice: 149.99, quantity: UInt(qty)!);
                 CargoItem.attachItemToEvent(item: xbox);
                 revenue += xbox.revenue;
+                self.xboxText.text = nil;
             }
         }
         if let qty = self.playstationText.text {
@@ -86,6 +89,7 @@ class ViewController: UIViewController {
                 let playstation = CargoItem.init(name: "Playstation 4", unitPrice: 240.75, quantity: UInt(qty)!);
                 CargoItem.attachItemToEvent(item: playstation);
                 revenue += playstation.revenue;
+                self.playstationText.text = nil;
             }
         }
         if let qty = self.nintendoText.text {
@@ -93,6 +97,7 @@ class ViewController: UIViewController {
                 let nintendo = CargoItem.init(name: "Nintendo Switch", unitPrice: 350, quantity: UInt(qty)!);
                 CargoItem.attachItemToEvent(item: nintendo);
                 revenue += nintendo.revenue;
+                self.nintendoText.text = nil;
             }
         }
         parameters["totalRevenue"] = revenue;

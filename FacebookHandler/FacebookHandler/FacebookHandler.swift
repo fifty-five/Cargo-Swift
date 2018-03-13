@@ -127,7 +127,7 @@ public class FacebookHandler: CARTagHandler {
 
                 // in case there is an eventName, valueToSum and additional parameters
                 if(params.count > 0){
-                    FBSDKAppEvents.logEvent(eventName as!String,
+                    FBSDKAppEvents.logEvent(eventName as! String,
                                         valueToSum: (valueToSum as? Double)!,
                                         parameters: params);
                     logger.logParamSetWithSuccess(EVENT_NAME, value: eventName);
