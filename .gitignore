@@ -6,6 +6,37 @@
 build/
 DerivedData/
 
+## Generated Frameworks for Adobe
+AdobeHandler/Frameworks/CargoCore.framework
+AdobeHandler/AdobeHandler.framework
+AdobeHandler/AdobeHandler.zip
+
+## Generated Frameworks for ATInternet
+ATInternetHandler/Frameworks/CargoCore.framework
+ATInternetHandler/ATInternetHandler.framework
+ATInternetHandler/ATInternetHandler.zip
+
+## Generated Frameworks for CargoCore
+CargoCore/CargoCore.framework
+CargoCore/CargoCore.zip
+
+## Generated Frameworks for CargoTestApp
+CargoTestApp/Frameworks/AdobeHandler.framework
+CargoTestApp/Frameworks/ATInternetHandler.framework
+CargoTestApp/Frameworks/CargoCore.framework
+CargoTestApp/Frameworks/FacebookHandler.framework
+CargoTestApp/Frameworks/TuneHandler.framework
+
+## Generated Frameworks for Facebook
+FacebookHandler/Frameworks/CargoCore.framework
+FacebookHandler/FacebookHandler.framework
+FacebookHandler/FacebookHandler.zip
+
+## Generated Frameworks for Tune
+TuneHandler/Frameworks/CargoCore.framework
+TuneHandler/TuneHandler.framework
+TuneHandler/TuneHandler.zip
+
 ## Various settings
 *.pbxuser
 !default.pbxuser
