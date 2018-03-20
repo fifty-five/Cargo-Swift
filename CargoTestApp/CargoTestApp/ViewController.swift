@@ -8,22 +8,37 @@
 
 import UIKit
 import CargoCore
+import CoreLocation
 
-class ViewController: UIViewController {
-    
+@available(iOS 9.0, *)
+class ViewController: UIViewController, CLLocationManagerDelegate {
+
     @IBOutlet weak var scrollView: UIScrollView!;
-    
+
     @IBOutlet weak var userNameText: UITextField!
     @IBOutlet weak var userEmailText: UITextField!
     @IBOutlet weak var event_screenText: UITextField!
-    
+
     @IBOutlet weak var xboxText: UITextField!
     @IBOutlet weak var playstationText: UITextField!
     @IBOutlet weak var nintendoText: UITextField!
     
+    @IBOutlet weak var privacyStatusSegment: UISegmentedControl!
+    
+    let locationManager = CLLocationManager();
+    @IBOutlet weak var sendLocation: UISwitch!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // Ask for Authorisation from the User.
+        self.locationManager.requestAlwaysAuthorization();
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization();
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self;
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+        }
         // Do any additional setup after loading the view, typically from a nib.
         Analytics.logEvent("applicationStart", parameters: nil);
     }
@@ -42,9 +57,22 @@ class ViewController: UIViewController {
             self.event_screenText.text = nil;
         }
         Analytics.logEvent("tagEvent", parameters: parameters);
+        
+        if (sendLocation.isOn) {
+            Analytics.logEvent("tagLocation", parameters: nil);
+        }
     }
-    
-    
+
+    @IBAction func afterEditXBox(_ sender: UITextField) {
+        Analytics.logEvent("actionStart", parameters: ["actionName": "shopXbox"]);
+    }
+    @IBAction func afterEditPlaystation(_ sender: UITextField) {
+        Analytics.logEvent("actionStart", parameters: ["actionName": "shopPlaystation"]);
+    }
+    @IBAction func afterEditNintendo(_ sender: UITextField) {
+        Analytics.logEvent("actionStart", parameters: ["actionName": "shopNintendo"]);
+    }
+
     @IBAction func pressedUser(_ sender : AnyObject) {
         var parameters = [String: AnyHashable]();
         
@@ -56,8 +84,11 @@ class ViewController: UIViewController {
             parameters["userEmail"] = userEmail;
             self.userEmailText.text = nil;
         }
-        
         Analytics.logEvent("tagUser", parameters: parameters as [String : NSObject]?);
+
+        if (sendLocation.isOn) {
+            Analytics.logEvent("tagLocation", parameters: nil);
+        }
     }
     
     @IBAction func pressedScreen(_ sender : AnyObject) {
@@ -69,7 +100,12 @@ class ViewController: UIViewController {
             self.event_screenText.text = nil;
         }
         Analytics.logEvent("tagScreen", parameters: parameters);
+        if (sendLocation.isOn) {
+            Analytics.logEvent("tagLocation", parameters: nil);
+        }
     }
+
+    
     
     @IBAction func pressedPurchase(_ sender : AnyObject) {
         var parameters = [String: AnyHashable]();
@@ -82,6 +118,7 @@ class ViewController: UIViewController {
                 CargoItem.attachItemToEvent(item: xbox);
                 revenue += xbox.revenue;
                 self.xboxText.text = nil;
+                Analytics.logEvent("actionEnd", parameters: ["actionName": "shopXbox", "successfulAction": true]);
             }
         }
         if let qty = self.playstationText.text {
@@ -90,6 +127,7 @@ class ViewController: UIViewController {
                 CargoItem.attachItemToEvent(item: playstation);
                 revenue += playstation.revenue;
                 self.playstationText.text = nil;
+                Analytics.logEvent("actionEnd", parameters: ["actionName": "shopPlaystation", "successfulAction": true]);
             }
         }
         if let qty = self.nintendoText.text {
@@ -98,6 +136,7 @@ class ViewController: UIViewController {
                 CargoItem.attachItemToEvent(item: nintendo);
                 revenue += nintendo.revenue;
                 self.nintendoText.text = nil;
+                Analytics.logEvent("actionEnd", parameters: ["actionName": "shopNintendo", "successfulAction": true]);
             }
         }
         parameters["totalRevenue"] = revenue;
@@ -105,6 +144,44 @@ class ViewController: UIViewController {
             parameters["eventItems"] = true;
         }
         Analytics.logEvent("tagPurchase", parameters: parameters as [String : NSObject]?);
+        if (sendLocation.isOn) {
+            Analytics.logEvent("tagLocation", parameters: nil);
+        }
+    }
+
+    @IBAction func switchLocationValueChanged(_ sender: UISwitch) {
+        if (sendLocation.isOn) {
+            locationManager.startUpdatingLocation();
+        }
+        else {
+            locationManager.stopUpdatingLocation();
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocation = manager.location else {
+            return;
+        }
+        CargoLocation.setLocation(location: locValue);
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Failed to find user's location: \(error.localizedDescription)")
+    }
+    
+    @IBAction func PrivacyStatusSegmentValueChanged(_ sender: UISegmentedControl) {
+        var privacyStatus = "UNKNOWN";
+
+        if (privacyStatusSegment.selectedSegmentIndex == 0) {
+            privacyStatus = "OPT_IN";
+        }
+        else if (privacyStatusSegment.selectedSegmentIndex == 1) {
+            privacyStatus = "OPT_OUT";
+        }
+        else {
+            privacyStatus = "UNKNOWN";
+        }
+        Analytics.logEvent("setPrivacy", parameters: ["privacyStatus" : privacyStatus]);
     }
     
     @IBAction func clickOnView(_ sender: UITapGestureRecognizer) {

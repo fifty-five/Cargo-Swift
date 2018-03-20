@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		802A99302059670300479F6D /* AdobeHandler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802A992F2059670300479F6D /* AdobeHandler.framework */; };
+		802A99322059670B00479F6D /* AdobeHandler.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 802A992F2059670300479F6D /* AdobeHandler.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		802A993420596CD300479F6D /* ADBMobileConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 802A993320596CD200479F6D /* ADBMobileConfig.json */; };
 		808E1A4E20501C2300E1980B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808E1A4D20501C2300E1980B /* AppDelegate.swift */; };
 		808E1A5020501C2300E1980B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808E1A4F20501C2300E1980B /* ViewController.swift */; };
 		808E1A5320501C2400E1980B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808E1A5120501C2400E1980B /* Main.storyboard */; };
@@ -42,6 +45,7 @@
 				808E1A8E2050314C00E1980B /* CargoCore.framework in Embed Frameworks */,
 				808E1A9A205031D900E1980B /* GoogleToolboxForMac.framework in Embed Frameworks */,
 				808E1A962050314C00E1980B /* TuneHandler.framework in Embed Frameworks */,
+				802A99322059670B00479F6D /* AdobeHandler.framework in Embed Frameworks */,
 				808E1A902050314C00E1980B /* FacebookHandler.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -50,6 +54,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		802A992F2059670300479F6D /* AdobeHandler.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdobeHandler.framework; path = Frameworks/AdobeHandler.framework; sourceTree = "<group>"; };
+		802A993320596CD200479F6D /* ADBMobileConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ADBMobileConfig.json; sourceTree = "<group>"; };
 		808E1A4A20501C2300E1980B /* CargoTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CargoTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		808E1A4D20501C2300E1980B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		808E1A4F20501C2300E1980B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +83,7 @@
 				808E1AB220503BC800E1980B /* ATInternetHandler.framework in Frameworks */,
 				808E1AB620503D6F00E1980B /* Tracker.framework in Frameworks */,
 				808E1A8D2050314C00E1980B /* CargoCore.framework in Frameworks */,
+				802A99302059670300479F6D /* AdobeHandler.framework in Frameworks */,
 				808E1A8F2050314C00E1980B /* FacebookHandler.framework in Frameworks */,
 				808E1A99205031D900E1980B /* GoogleToolboxForMac.framework in Frameworks */,
 				808E1A972050315A00E1980B /* Tune.framework in Frameworks */,
@@ -108,6 +115,7 @@
 		808E1A4C20501C2300E1980B /* CargoTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				802A993320596CD200479F6D /* ADBMobileConfig.json */,
 				808E1A75205022CE00E1980B /* container */,
 				808E1A4D20501C2300E1980B /* AppDelegate.swift */,
 				808E1A4F20501C2300E1980B /* ViewController.swift */,
@@ -123,6 +131,7 @@
 		808E1A6E2050211D00E1980B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				802A992F2059670300479F6D /* AdobeHandler.framework */,
 				808E1AB420503C7300E1980B /* Tracker.framework */,
 				808E1AB020503BC100E1980B /* ATInternetHandler.framework */,
 				808E1A852050314300E1980B /* CargoCore.framework */,
@@ -195,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				808E1A5B20501C2600E1980B /* LaunchScreen.storyboard in Resources */,
+				802A993420596CD300479F6D /* ADBMobileConfig.json in Resources */,
 				808E1A6A20501C8E00E1980B /* GoogleService-Info.plist in Resources */,
 				808E1A76205022CE00E1980B /* container in Resources */,
 				808E1A5820501C2500E1980B /* Assets.xcassets in Resources */,
@@ -273,6 +283,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -282,7 +293,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

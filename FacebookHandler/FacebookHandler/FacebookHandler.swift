@@ -107,9 +107,9 @@ public class FacebookHandler: CARTagHandler {
     }
 
     /// Send an event to facebook SDK. Calls differents methods depending on which parameters have been given
-    ///  Each events can be logged with a valueToSum and a set of parameters (up to 25 parameters).
-    ///  When reported, all of the valueToSum properties will be summed together. It is an arbitrary number
-    ///  that can represent any value (e.g., a price or a quantity).
+    /// Each events can be logged with a valueToSum and a set of parameters (up to 25 parameters).
+    /// When reported, all of the valueToSum properties will be summed together. It is an arbitrary number
+    /// that can represent any value (e.g., a price or a quantity).
     ///
     /// - Parameters:
     ///   - eventName: the name of the event, which is mandatory
