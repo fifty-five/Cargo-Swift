@@ -20,7 +20,7 @@
     "rsids": "55smobiledev",
     "server": "55sas.sc.omtrdc.net",
     "ssl": false,
-    "offlineEnabled": false,
+    "offlineEnabled": true,
     "charset": "UTF-8",
     "lifecycleTimeout": 1800,
     "privacyDefault": "optedin",

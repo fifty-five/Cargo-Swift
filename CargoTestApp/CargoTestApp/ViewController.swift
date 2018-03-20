@@ -41,7 +41,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
         // Do any additional setup after loading the view, typically from a nib.
         Analytics.logEvent("applicationStart", parameters: nil);
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,11 +60,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         if (sendLocation.isOn) {
             Analytics.logEvent("tagLocation", parameters: nil);
-            print("CargoLocation = \(String(describing: CargoLocation.getLocation()))");
         }
     }
-    
-    
+
+    @IBAction func afterEditXBox(_ sender: UITextField) {
+        Analytics.logEvent("actionStart", parameters: ["actionName": "shopXbox"]);
+    }
+    @IBAction func afterEditPlaystation(_ sender: UITextField) {
+        Analytics.logEvent("actionStart", parameters: ["actionName": "shopPlaystation"]);
+    }
+    @IBAction func afterEditNintendo(_ sender: UITextField) {
+        Analytics.logEvent("actionStart", parameters: ["actionName": "shopNintendo"]);
+    }
+
     @IBAction func pressedUser(_ sender : AnyObject) {
         var parameters = [String: AnyHashable]();
         
@@ -97,6 +104,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             Analytics.logEvent("tagLocation", parameters: nil);
         }
     }
+
+    
     
     @IBAction func pressedPurchase(_ sender : AnyObject) {
         var parameters = [String: AnyHashable]();
@@ -109,6 +118,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 CargoItem.attachItemToEvent(item: xbox);
                 revenue += xbox.revenue;
                 self.xboxText.text = nil;
+                Analytics.logEvent("actionEnd", parameters: ["actionName": "shopXbox", "successfulAction": true]);
             }
         }
         if let qty = self.playstationText.text {
@@ -117,6 +127,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 CargoItem.attachItemToEvent(item: playstation);
                 revenue += playstation.revenue;
                 self.playstationText.text = nil;
+                Analytics.logEvent("actionEnd", parameters: ["actionName": "shopPlaystation", "successfulAction": true]);
             }
         }
         if let qty = self.nintendoText.text {
@@ -125,6 +136,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 CargoItem.attachItemToEvent(item: nintendo);
                 revenue += nintendo.revenue;
                 self.nintendoText.text = nil;
+                Analytics.logEvent("actionEnd", parameters: ["actionName": "shopNintendo", "successfulAction": true]);
             }
         }
         parameters["totalRevenue"] = revenue;
@@ -150,7 +162,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         guard let locValue: CLLocation = manager.location else {
             return;
         }
-        print("Location : \(locValue.coordinate.latitude) \(locValue.coordinate.longitude)")
         CargoLocation.setLocation(location: locValue);
     }
     
@@ -163,15 +174,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
         if (privacyStatusSegment.selectedSegmentIndex == 0) {
             privacyStatus = "OPT_IN";
-            print("OPT_IN BIATCH");
         }
         else if (privacyStatusSegment.selectedSegmentIndex == 1) {
             privacyStatus = "OPT_OUT";
-            print("OPT_OUT BIATCH");
         }
         else {
             privacyStatus = "UNKNOWN";
-            print("UNKNOWN BIATCH");
         }
         Analytics.logEvent("setPrivacy", parameters: ["privacyStatus" : privacyStatus]);
     }

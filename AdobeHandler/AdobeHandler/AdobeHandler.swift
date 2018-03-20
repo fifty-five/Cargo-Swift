@@ -111,20 +111,25 @@ public class AdobeHandler: CARTagHandler {
     ///   - overrideConfigPath: the name, without its extension, of the JSON config file to use.
     ///   - parameters: all the other parameters are given as parameters for the collectLifeCycle method
     fileprivate func initialize(parameters: [AnyHashable: Any]){
-        let configPath = "overrideConfigPath";
+        let overrideConfigPath = "overrideConfigPath";
         var params = parameters;
 
+        // set the handler as initialized.
+        self.initialized = true;
         // get the filename, and set it as the config file which should be used by the SDK
-        if let overrideConfig = params[configPath] {
+        if let overrideConfig = params[overrideConfigPath] {
             if let configPath = Bundle.main.path(forResource: overrideConfig as? String,
                                                          ofType: "json") {
                 ADBMobile.overrideConfigPath(configPath);
-                self.logger.logParamSetWithSuccess(configPath, value: configPath);
+                self.logger.logParamSetWithSuccess(overrideConfigPath, value: configPath);
             }
             else {
                 self.logger.carLog(CARLogger.LogLevelType.error, message: "\(overrideConfig).json not found.")
+                // set the handler as uninitialized.
+                self.initialized = false;
+                return;
             }
-            params.removeValue(forKey: configPath);
+            params.removeValue(forKey: overrideConfigPath);
         }
 
         // checks wether the initial log level is verbose/debug, and activate the SDK's logs if so.
@@ -136,8 +141,6 @@ public class AdobeHandler: CARTagHandler {
 
         // calls the collectLifeCycle method with all the parameters left in the given parameters.
         self.collectLifeCycle(parameters: params);
-        // set the handler as initialized.
-        self.initialized = true;
     }
     
 
