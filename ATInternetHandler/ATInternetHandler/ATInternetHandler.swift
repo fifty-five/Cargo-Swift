@@ -40,7 +40,7 @@ public class ATInternetHandler: CARTagHandler {
 
     /// Initialize the handler, sets the default tracker and register the callbacks to the container
     /// Call it in the AppDelegate after you retrieved the GTM container and initialized Cargo.
-    public init() {
+    @objc public init() {
         self.tracker = ATInternet.sharedInstance.defaultTracker;
         super.init(key: "AT", name: "AT Internet");
         if (self.logger.level.rawValue <= CARLogger.LogLevelType.debug.rawValue) {

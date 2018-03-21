@@ -52,7 +52,7 @@ public class TuneHandler: CARTagHandler {
     /// Enable or disable the Tune debug mode, based on the log level activated in the Cargo logger
     /// Register the callbacks to the container. After a dataLayer.push(),
     /// these will trigger the execute method of this handler.
-    public init() {
+    @objc public init() {
         EVENT_MIXED_PROPERTIES = [EVENT_RATING, EVENT_DATE1, EVENT_DATE2,
                                   EVENT_REVENUE, EVENT_ITEMS, EVENT_LEVEL,
                                   EVENT_RECEIPT, EVENT_QUANTITY, EVENT_TRANSACTION_STATE];

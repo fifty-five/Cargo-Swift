@@ -34,7 +34,7 @@ open class CARTagHandler : NSObject {
     /// - Parameters:
     ///   - key: a unique key describing the handler
     ///   - name: the name of the handler
-    public init(key:String, name:String){
+    @objc public init(key:String, name:String){
         self.key = key;
         self.name = name;
         super.init();
@@ -48,12 +48,12 @@ open class CARTagHandler : NSObject {
     /// - Parameters:
     ///   - tagName: the tag name of the callback method
     ///   - parameters: the parameters sent to the method through a dictionary
-    open func execute(_ tagName:String, parameters:[AnyHashable: Any]){
+    @objc open func execute(_ tagName:String, parameters:[AnyHashable: Any]){
         logger.logReceivedFunction(tagName, parameters: parameters as! [String : Any]);
     }
     
     /// Called in registerHandlers to validate a handler and check for its initialization.
-    open func validate(){
+    @objc open func validate(){
         valid = true;
     }
     

@@ -154,7 +154,7 @@ public class CARLogger: NSObject {
     /* ************************************** Utilities methods ************************************* */
     
     /// Enum for the level of log
-    public enum LogLevelType: Int {
+    @objc public enum LogLevelType: Int {
         case verbose = 0;
         case debug = 1;
         case info = 2;

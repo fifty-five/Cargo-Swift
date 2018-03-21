@@ -29,7 +29,7 @@ public class FacebookHandler: CARTagHandler {
     /// Called to instantiate the handler with its key and name properties.
     /// Register the callbacks to the container. After a dataLayer.push(),
     /// these will trigger the execute method of this handler.
-    public init() {
+    @objc public init() {
         super.init(key: "FB", name: "Facebook");
         // enables Facebook debug mode if the cargo logger is set to debug, disables it otherwise
         if (self.logger.level.rawValue <= CARLogger.LogLevelType.debug.rawValue) {

@@ -40,7 +40,7 @@ public class Cargo: NSObject {
     /// The constructor to call before getInstance method if a level of log is wanted.
     ///
     /// - Parameter logLevel: the desired level of log
-    public init(logLevel:CARLogger.LogLevelType) {
+    @objc public init(logLevel:CARLogger.LogLevelType) {
         logger = CARLogger(aContext: "Cargo", logLevel: logLevel);
         super.init();
         Cargo.instance = self;
@@ -79,7 +79,7 @@ public class Cargo: NSObject {
     /// Sets the level of log for Cargo and the registered handlers
     ///
     /// - Parameter level: the level of log which will be used.
-    public func setLogLevel(level: CARLogger.LogLevelType) {
+    @objc public func setLogLevel(level: CARLogger.LogLevelType) {
         self.logger.setLogLevel(level);
         for (_, handler) in registeredTagHandlers {
             handler.logger.setLogLevel(level);

@@ -13,11 +13,11 @@ public class CargoLocation : NSObject {
 
     fileprivate static var location:CLLocation? = nil;
 
-    public static func setLocation(location: CLLocation?) {
+    @objc public static func setLocation(location: CLLocation?) {
         CargoLocation.location = location;
     }
     
-    public static func getLocation() -> CLLocation? {
+    @objc public static func getLocation() -> CLLocation? {
         return CargoLocation.location;
     }
 }

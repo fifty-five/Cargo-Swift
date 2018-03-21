@@ -14,7 +14,6 @@
 				802A99202056C99A00479F6D /* ShellScript */,
 			);
 			dependencies = (
-				802A99222056C9AB00479F6D /* PBXTargetDependency */,
 			);
 			name = Aggregate;
 			productName = Aggregate;
@@ -31,16 +30,6 @@
 		802A992E2057E53700479F6D /* CargoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802A992D2057E53700479F6D /* CargoCore.framework */; };
 		803F58F4205052CD006EE2A5 /* AdobeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 803F58F2205052CC006EE2A5 /* AdobeHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		802A99212056C9AB00479F6D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 803F58E6205052CC006EE2A5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 803F58EE205052CC006EE2A5;
-			remoteInfo = AdobeHandler;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		802A990D2056C20600479F6D /* ADBMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBMobile.h; sourceTree = "<group>"; };
@@ -226,14 +215,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		802A99222056C9AB00479F6D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 803F58EE205052CC006EE2A5 /* AdobeHandler */;
-			targetProxy = 802A99212056C9AB00479F6D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		802A991F2056C88500479F6D /* Release */ = {

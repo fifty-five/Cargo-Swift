@@ -14,7 +14,6 @@
 				80B066772035D94E00D5F49C /* ShellScript */,
 			);
 			dependencies = (
-				8014B2CB203B2A5700DFE21A /* PBXTargetDependency */,
 			);
 			name = Aggregate;
 			productName = Aggregate;
@@ -63,16 +62,6 @@
 		80842775203C616000FD8028 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80842752203C616000FD8028 /* GoogleSymbolUtilities.framework */; };
 		80842777203C61AE00FD8028 /* TagManagerResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 80842776203C61AE00FD8028 /* TagManagerResources.bundle */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		8014B2CA203B2A5700DFE21A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 806212072033237800EAFA34 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8062120F2033237800EAFA34;
-			remoteInfo = CargoCore;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8014B22F203B119100DFE21A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -561,14 +550,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8014B2CB203B2A5700DFE21A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8062120F2033237800EAFA34 /* CargoCore */;
-			targetProxy = 8014B2CA203B2A5700DFE21A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		806212172033237800EAFA34 /* Release */ = {

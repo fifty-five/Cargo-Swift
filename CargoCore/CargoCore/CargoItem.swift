@@ -49,7 +49,7 @@ public class CargoItem : NSObject {
     /// This event can be a purchase, an add-to-cart, add-to-whishlist...
     ///
     /// - Parameter item: the CargoItem object you want to link to the next event.
-    public class func attachItemToEvent(item: CargoItem) {
+    @objc public class func attachItemToEvent(item: CargoItem) {
         self.emptyListIfTagHasBeenFired();
         if ((self.itemsArray?.append(item)) == nil) {
             self.itemsArray = [item];
@@ -99,7 +99,7 @@ public class CargoItem : NSObject {
     ///   - name: name of the item
     ///   - unitPrice: unit price of the item
     ///   - quantity: amount of all these items
-    public init(name: String!, unitPrice: CGFloat, quantity: UInt) {
+    @objc public init(name: String!, unitPrice: CGFloat, quantity: UInt) {
         self.name = name;
         self.unitPrice = unitPrice;
         self.quantity = quantity;
@@ -114,7 +114,7 @@ public class CargoItem : NSObject {
     ///   - unitPrice: unit price of the item
     ///   - quantity: amount of all these items
     ///   - revenue: total cost of all these items
-    public init(name: String!, unitPrice: CGFloat, quantity: UInt, revenue: CGFloat) {
+    @objc public init(name: String!, unitPrice: CGFloat, quantity: UInt, revenue: CGFloat) {
         self.name = name;
         self.unitPrice = unitPrice;
         self.quantity = quantity;
@@ -123,7 +123,7 @@ public class CargoItem : NSObject {
     
     
     /// A String representation for the current object.
-    override public var description: String {
+    @objc override public var description: String {
         var json: String = "{\n\"name\": \"\(self.name!)\",\n \"unitPrice\": \"\(self.unitPrice)\",\n" +
         "\"quantity\": \"\(self.quantity)\",\n\"revenue\": \"\(self.revenue)\"";
         if ((attribute1) != nil) {

@@ -36,7 +36,7 @@ public class AdobeHandler: CARTagHandler {
     /// Called to instantiate the handler with its key and name properties.
     /// Register the callbacks to the container. After a dataLayer.push(),
     /// these will trigger the execute method of this handler.
-    public init() {
+    @objc public init() {
         super.init(key: "ADB", name: "Adobe");
     }
     
