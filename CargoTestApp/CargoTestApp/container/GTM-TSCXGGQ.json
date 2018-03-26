@@ -1,9 +1,9 @@
 {
 
-"fingerprint":"MjQ$0",
+"fingerprint":"MzA$0",
 
 "resource": {
-  "version":"24",
+  "version":"30",
   "macros":[{
       "function":"__e",
       "instance_name":"Event Name",
@@ -98,6 +98,13 @@
       "vtp_setDefaultValue":false,
       "vtp_eventType":"CUSTOM",
       "vtp_key":"successfulAction"
+    },{
+      "function":"__md",
+      "instance_name":"screenType",
+      "vendor_template_version":"1",
+      "vtp_setDefaultValue":false,
+      "vtp_eventType":"CUSTOM",
+      "vtp_key":"screenType"
     },{
       "function":"__ai",
       "instance_name":"App ID",
@@ -230,7 +237,7 @@
       "instance_name":"init_ADB",
       "once_per_event":true,
       "vendor_template_version":"1",
-      "vtp_functionArgument":["list",["map","key","handlerMethod","value","ADB_init"],["map","key","overrideConfigPath","value","ADBMobileConfig"]],
+      "vtp_functionArgument":["list",["map","key","handlerMethod","value","ADB_init"]],
       "vtp_classPath":"Tags",
       "tag_id":15
     },{
@@ -238,7 +245,7 @@
       "instance_name":"tagEvent_ADB",
       "once_per_event":true,
       "vendor_template_version":"1",
-      "vtp_functionArgument":["list",["map","key","handlerMethod","value","ADB_tagEvent"],["map","key","eventName","value",["macro",1]]],
+      "vtp_functionArgument":["list",["map","key","handlerMethod","value","ADB_tagEvent"],["map","key","eventName","value",["macro",1]],["map","key","truc","value","muche"],["map","key","baba","value","oRhum"]],
       "vtp_classPath":"Tags",
       "tag_id":16
     },{
@@ -246,7 +253,7 @@
       "instance_name":"tagScreen_ADB",
       "once_per_event":true,
       "vendor_template_version":"1",
-      "vtp_functionArgument":["list",["map","key","handlerMethod","value","ADB_tagScreen"],["map","key","screenName","value",["macro",3]]],
+      "vtp_functionArgument":["list",["map","key","handlerMethod","value","ADB_tagScreen"],["map","key","screenName","value",["macro",3]],["map","key","screenType","value","HP"]],
       "vtp_classPath":"Tags",
       "tag_id":17
     },{
@@ -254,7 +261,7 @@
       "instance_name":"tagLocation_ADB",
       "once_per_event":true,
       "vendor_template_version":"1",
-      "vtp_functionArgument":["list",["map","key","handlerMethod","value","ADB_trackLocation"],["map","key","locationName","value","an amazing location bwoy !"]],
+      "vtp_functionArgument":["list",["map","key","handlerMethod","value","ADB_trackLocation"],["map","key","locationName","value","testLocation"]],
       "vtp_classPath":"Tags",
       "tag_id":18
     },{
@@ -308,19 +315,19 @@
       "arg1":"tagPurchase"
     },{
       "function":"_eq",
-      "arg0":["macro",1],
+      "arg0":["macro",0],
       "arg1":"tagLocation"
     },{
       "function":"_eq",
-      "arg0":["macro",1],
+      "arg0":["macro",0],
       "arg1":"setPrivacy"
     },{
       "function":"_eq",
-      "arg0":["macro",1],
+      "arg0":["macro",0],
       "arg1":"actionStart"
     },{
       "function":"_eq",
-      "arg0":["macro",1],
+      "arg0":["macro",0],
       "arg1":"actionEnd"
     }],
   "rules":[

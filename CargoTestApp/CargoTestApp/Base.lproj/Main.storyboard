@@ -191,9 +191,6 @@
                                     <constraint firstItem="kS0-68-qsW" firstAttribute="bottom" secondItem="0KL-CZ-95d" secondAttribute="bottomMargin" id="xZl-Ox-SBC"/>
                                     <constraint firstItem="MWx-lc-AVP" firstAttribute="leading" secondItem="0KL-CZ-95d" secondAttribute="leading" constant="59" id="y0e-mX-JQJ"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="DTM-Va-24d" appends="YES" id="k9F-BZ-RXW"/>
-                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
