@@ -34,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ = ATInternetHandler();
         _ = FacebookHandler();
         _ = TuneHandler();
+        
+        Analytics.logEvent("applicationStart", parameters: ["bundleIdentifier": Bundle.main.bundleIdentifier as String!]);
         return true
     }
 

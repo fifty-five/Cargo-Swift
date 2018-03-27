@@ -23,7 +23,6 @@
 /* Begin PBXBuildFile section */
 		802A99132056C20600479F6D /* ADBMobile.h in Headers */ = {isa = PBXBuildFile; fileRef = 802A990D2056C20600479F6D /* ADBMobile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		802A99152056C20600479F6D /* AdobeMobileLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 802A990F2056C20600479F6D /* AdobeMobileLibrary.a */; };
-		802A99162056C20600479F6D /* AdobeMobileLibrary_Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 802A99102056C20600479F6D /* AdobeMobileLibrary_Extension.a */; };
 		802A991A2056C3D100479F6D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802A99192056C3D100479F6D /* SystemConfiguration.framework */; };
 		802A991C2056C3DC00479F6D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 802A991B2056C3DC00479F6D /* libsqlite3.0.tbd */; };
 		802A99242056CDD900479F6D /* AdobeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802A99232056CDD900479F6D /* AdobeHandler.swift */; };
@@ -51,7 +50,6 @@
 			files = (
 				802A99152056C20600479F6D /* AdobeMobileLibrary.a in Frameworks */,
 				802A992E2057E53700479F6D /* CargoCore.framework in Frameworks */,
-				802A99162056C20600479F6D /* AdobeMobileLibrary_Extension.a in Frameworks */,
 				802A991C2056C3DC00479F6D /* libsqlite3.0.tbd in Frameworks */,
 				802A991A2056C3D100479F6D /* SystemConfiguration.framework in Frameworks */,
 			);

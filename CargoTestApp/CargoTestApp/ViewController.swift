@@ -40,7 +40,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
         }
         // Do any additional setup after loading the view, typically from a nib.
-        Analytics.logEvent("applicationStart", parameters: nil);
     }
     
     override func didReceiveMemoryWarning() {

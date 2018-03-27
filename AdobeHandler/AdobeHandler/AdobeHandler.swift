@@ -111,25 +111,47 @@ public class AdobeHandler: CARTagHandler {
     ///   - overrideConfigPath: the name, without its extension, of the JSON config file to use.
     ///   - parameters: all the other parameters are given as parameters for the collectLifeCycle method
     fileprivate func initialize(parameters: [AnyHashable: Any]){
+        let bundleIdentifier = "bundleIdentifier"
         let overrideConfigPath = "overrideConfigPath";
+        let defaultPath = "ADBMobileConfig";
         var params = parameters;
 
         // set the handler as initialized.
         self.initialized = true;
-        // get the filename, and set it as the config file which should be used by the SDK
-        if let overrideConfig = params[overrideConfigPath] {
-            if let configPath = Bundle.main.path(forResource: overrideConfig as? String,
-                                                         ofType: "json") {
+
+        if let bundleId = params[bundleIdentifier] {
+            let bundle = Bundle(identifier: bundleId as! String)!;
+            params.removeValue(forKey: bundleIdentifier);
+
+            // get the filename, and set it as the config file which should be used by the SDK
+            if let overrideConfig = params[overrideConfigPath] {
+                if let configPath = bundle.path(forResource: overrideConfig as? String,
+                                                             ofType: "json") {
+                    ADBMobile.overrideConfigPath(configPath);
+                    self.logger.logParamSetWithSuccess(overrideConfigPath, value: configPath);
+                }
+                else {
+                    self.logger.carLog(CARLogger.LogLevelType.error, message: "\(overrideConfig).json not found.")
+                    // set the handler as uninitialized.
+                    self.initialized = false;
+                    return;
+                }
+                params.removeValue(forKey: overrideConfigPath);
+            }
+            else if let configPath = bundle.path(forResource: defaultPath, ofType: "json") {
                 ADBMobile.overrideConfigPath(configPath);
                 self.logger.logParamSetWithSuccess(overrideConfigPath, value: configPath);
             }
             else {
-                self.logger.carLog(CARLogger.LogLevelType.error, message: "\(overrideConfig).json not found.")
+                self.logger.carLog(CARLogger.LogLevelType.error, message: "\(defaultPath).json not found.")
                 // set the handler as uninitialized.
                 self.initialized = false;
                 return;
             }
-            params.removeValue(forKey: overrideConfigPath);
+        }
+        else {
+            self.initialized = false;
+            self.logger.logMissingParam(bundleIdentifier, methodName: ADB_INIT);
         }
 
         // checks wether the initial log level is verbose/debug, and activate the SDK's logs if so.
