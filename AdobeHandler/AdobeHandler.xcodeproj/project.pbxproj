@@ -21,19 +21,16 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		802A99132056C20600479F6D /* ADBMobile.h in Headers */ = {isa = PBXBuildFile; fileRef = 802A990D2056C20600479F6D /* ADBMobile.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		802A99152056C20600479F6D /* AdobeMobileLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 802A990F2056C20600479F6D /* AdobeMobileLibrary.a */; };
 		802A991A2056C3D100479F6D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802A99192056C3D100479F6D /* SystemConfiguration.framework */; };
 		802A991C2056C3DC00479F6D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 802A991B2056C3DC00479F6D /* libsqlite3.0.tbd */; };
 		802A99242056CDD900479F6D /* AdobeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802A99232056CDD900479F6D /* AdobeHandler.swift */; };
 		802A992E2057E53700479F6D /* CargoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802A992D2057E53700479F6D /* CargoCore.framework */; };
 		803F58F4205052CD006EE2A5 /* AdobeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 803F58F2205052CC006EE2A5 /* AdobeHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F93AFBF3206A869D00D92F96 /* AdobeMobileLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F93AFBF1206A864600D92F96 /* AdobeMobileLibrary.a */; };
+		F93AFBF4206A86F800D92F96 /* ADBMobile.h in Headers */ = {isa = PBXBuildFile; fileRef = F93AFBF2206A864600D92F96 /* ADBMobile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		802A990D2056C20600479F6D /* ADBMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADBMobile.h; sourceTree = "<group>"; };
-		802A990F2056C20600479F6D /* AdobeMobileLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AdobeMobileLibrary.a; sourceTree = "<group>"; };
-		802A99102056C20600479F6D /* AdobeMobileLibrary_Extension.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AdobeMobileLibrary_Extension.a; sourceTree = "<group>"; };
 		802A99192056C3D100479F6D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		802A991B2056C3DC00479F6D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		802A99232056CDD900479F6D /* AdobeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdobeHandler.swift; sourceTree = "<group>"; };
@@ -41,6 +38,8 @@
 		803F58EF205052CC006EE2A5 /* AdobeHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdobeHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		803F58F2205052CC006EE2A5 /* AdobeHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdobeHandler.h; sourceTree = "<group>"; };
 		803F58F3205052CD006EE2A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F93AFBF1206A864600D92F96 /* AdobeMobileLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AdobeMobileLibrary.a; sourceTree = "<group>"; };
+		F93AFBF2206A864600D92F96 /* ADBMobile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADBMobile.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				802A99152056C20600479F6D /* AdobeMobileLibrary.a in Frameworks */,
+				F93AFBF3206A869D00D92F96 /* AdobeMobileLibrary.a in Frameworks */,
 				802A992E2057E53700479F6D /* CargoCore.framework in Frameworks */,
 				802A991C2056C3DC00479F6D /* libsqlite3.0.tbd in Frameworks */,
 				802A991A2056C3D100479F6D /* SystemConfiguration.framework in Frameworks */,
@@ -72,9 +71,8 @@
 		802A990C2056C20600479F6D /* AdobeMobileLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				802A990D2056C20600479F6D /* ADBMobile.h */,
-				802A990F2056C20600479F6D /* AdobeMobileLibrary.a */,
-				802A99102056C20600479F6D /* AdobeMobileLibrary_Extension.a */,
+				F93AFBF2206A864600D92F96 /* ADBMobile.h */,
+				F93AFBF1206A864600D92F96 /* AdobeMobileLibrary.a */,
 			);
 			path = AdobeMobileLibrary;
 			sourceTree = "<group>";
@@ -113,8 +111,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				802A99132056C20600479F6D /* ADBMobile.h in Headers */,
 				803F58F4205052CD006EE2A5 /* AdobeHandler.h in Headers */,
+				F93AFBF4206A86F800D92F96 /* ADBMobile.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
